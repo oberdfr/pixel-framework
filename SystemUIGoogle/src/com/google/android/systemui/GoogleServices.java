@@ -4,6 +4,7 @@ import android.app.AlarmManager;
 import android.content.Context;
 
 import com.android.systemui.R;
+import com.android.systemui.qs.QsEventLogger;
 import com.android.systemui.VendorServices;
 import com.android.systemui.statusbar.phone.CentralSurfaces;
 
@@ -24,15 +25,17 @@ public class GoogleServices extends VendorServices {
     private final ArrayList<Object> mServices;
     private final CentralSurfaces mCentralSurfaces;
     private final AlarmManager mAlarmManager;
+    private final QsEventLogger mUiEventLogger;
     private final Lazy<ColumbusServiceWrapper> mColumbusServiceLazy;
 
     @Inject
-    public GoogleServices(Context context, AlarmManager alarmManager, CentralSurfaces centralSurfaces, Lazy<ColumbusServiceWrapper> columbusServiceWrapperLazy) {
+    public GoogleServices(Context context, AlarmManager alarmManager, CentralSurfaces centralSurfaces, QsEventLogger uiEventLogger, Lazy<ColumbusServiceWrapper> columbusServiceWrapperLazy) {
         super();
         mContext = context;
         mServices = new ArrayList<>();
         mAlarmManager = alarmManager;
         mCentralSurfaces = centralSurfaces;
+        mUiEventLogger = uiEventLogger;
         mColumbusServiceLazy = columbusServiceWrapperLazy;
     }
 
@@ -45,7 +48,7 @@ public class GoogleServices extends VendorServices {
             addService(new TouchContextService(mContext));
         }
         AmbientIndicationContainer ambientIndicationContainer = (AmbientIndicationContainer) mCentralSurfaces.getNotificationShadeWindowView().findViewById(R.id.ambient_indication_container);
-        ambientIndicationContainer.initializeView(mCentralSurfaces);
+        ambientIndicationContainer.initializeView(mContext, mCentralSurfaces, ambientIndicationContainer);
         addService(new AmbientIndicationService(mContext, ambientIndicationContainer, mAlarmManager));
     }
 

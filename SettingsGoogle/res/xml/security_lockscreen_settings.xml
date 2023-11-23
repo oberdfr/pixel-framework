@@ -14,17 +14,6 @@
             android:title="@string/lock_screen_notifications_title"
             settings:keywords="@string/keywords_lock_screen_notif" />
 
-        <com.evolution.settings.preference.SecureSettingListPreference
-            android:key="face_unlock_method"
-            android:title="@string/face_unlock_method_title"
-            android:summary="%s"
-            android:dialogTitle="@string/face_unlock_method_title"
-            android:entries="@array/face_unlock_method_entries"
-            android:entryValues="@array/face_unlock_method_values"
-            android:defaultValue="0"
-            settings:searchable="false"
-            settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenUnlockMethodPreferenceController" />
-
         <SwitchPreference
             android:key="security_display_lockscreen_bypass"
             android:summary="@string/lockscreen_bypass_summary"
@@ -47,12 +36,6 @@
             android:summary="@string/lockscreen_privacy_wallet_summary"
             android:title="@string/lockscreen_privacy_wallet_setting_toggle"
             settings:controller="com.android.settings.display.WalletPrivacyPreferenceController" />
-
-        <SwitchPreference
-            android:key="lock_screen_show_qr_scanner"
-            android:title="@string/lockscreen_privacy_qr_code_scanner_setting_toggle"
-            android:summary="@string/lockscreen_privacy_qr_code_scanner_summary"
-            settings:controller="com.android.settings.display.QRCodeScannerPreferenceController" />
 
         <SwitchPreference
             android:key="lockscreen_privacy_controls_switch"
@@ -92,11 +75,11 @@
             settings:controller="com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController"
             settings:userRestriction="no_ambient_display" />
 
-        <SwitchPreference
+        <com.evolution.settings.preference.SecureSettingSwitchPreference
             android:key="doze_on_charge"
             android:title="@string/doze_on_charge_title"
             android:summary="@string/doze_on_charge_summary"
-            settings:controller="com.android.settings.display.DozeOnChargePreferenceController" />
+            android:defaultValue="false" />
 
         <Preference
             android:fragment="com.android.settings.gestures.TapScreenGestureSettings"
