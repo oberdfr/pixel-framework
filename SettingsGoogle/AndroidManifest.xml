@@ -202,6 +202,9 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/SudThemeGlif.Light" />
+        <activity android:name=".biometrics.face.FaceEnrollFinish"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.google.android.settings.biometrics.face.FaceEnrollParticipation"
             android:exported="false"
