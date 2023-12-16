@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/display_settings" android:key="display_settings_screen" settings:keywords="@string/keywords_display">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:key="display_settings_screen"
+    android:title="@string/display_settings"
+    settings:keywords="@string/keywords_display">
 
-    <PreferenceCategory
-        android:title="@string/category_name_brightness">
-
+    <PreferenceCategory android:title="@string/category_name_brightness">
         <com.android.settingslib.RestrictedPreference
             android:key="brightness"
             android:title="@string/brightness"
@@ -98,8 +100,8 @@
 
         <Preference
             android:key="livedisplay"
-            android:title="@*android:string/live_display_title"
             android:summary="@string/live_display_summary"
+            android:title="@*android:string/live_display_title"
             settings:controller="com.android.settings.livedisplay.LiveDisplayPreferenceController">
             <intent android:action="com.android.settings.LIVEDISPLAY_SETTINGS" />
         </Preference>
@@ -113,8 +115,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/category_name_display_controls">
+    <PreferenceCategory android:title="@string/category_name_display_controls">
 
         <SwitchPreference
             android:key="enable_blurs_on_windows"
@@ -150,15 +151,15 @@
 
         <ListPreference
             android:key="min_refresh_rate"
-            android:title="@string/min_refresh_rate_title"
             android:summary="@string/summary_placeholder"
+            android:title="@string/min_refresh_rate_title"
             settings:controller="com.android.settings.display.MinRefreshRatePreferenceController" />
 
         <ListPreference
             android:key="max_refresh_rate"
-            android:title="@string/max_refresh_rate_title"
             android:summary="@string/summary_placeholder"
-            settings:controller="com.android.settings.display.MaxRefreshRatePreferenceController"/>
+            android:title="@string/max_refresh_rate_title"
+            settings:controller="com.android.settings.display.MaxRefreshRatePreferenceController" />
 
         <SwitchPreference
             android:key="peak_refresh_rate"
@@ -224,10 +225,10 @@
             android:defaultValue="@*android:bool/config_unplugTurnsOnScreen" />
 
         <Preference
-            android:key="display_cutout_force_fullscreen_settings"
-            android:title="@string/display_cutout_force_fullscreen_title"
-            android:summary="@string/display_cutout_force_fullscreen_summary"
             android:fragment="com.android.settings.display.DisplayCutoutForceFullscreenSettings"
+            android:key="display_cutout_force_fullscreen_settings"
+            android:summary="@string/display_cutout_force_fullscreen_summary"
+            android:title="@string/display_cutout_force_fullscreen_title"
             settings:controller="com.android.settings.display.DisplayCutoutForceFullscreenPreferenceController" />
 
         <ListPreference

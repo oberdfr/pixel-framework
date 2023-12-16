@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/power_usage_summary_title" android:key="power_usage_summary_screen" settings:keywords="@string/keywords_battery">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:key="power_usage_summary_screen"
+    android:title="@string/power_usage_summary_title"
+    settings:keywords="@string/keywords_battery">
     <com.android.settingslib.widget.UsageProgressBarPreference
         android:key="battery_header"
         android:order="-7"
-        android:title="@string/summary_placeholder"
         android:selectable="false"
+        android:title="@string/summary_placeholder"
         settings:controller="com.android.settings.fuelgauge.BatteryHeaderPreferenceController" />
 
     <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/preference_battery_error"
         android:key="battery_help_message"
         android:order="-6"
+        android:layout="@layout/preference_battery_error"
         settings:searchable="false">
-        <intent 
+        <intent
             android:action="android.intent.action.VIEW"
             android:data="https://support.google.com/pixelphone/?p=p4xl_battery" />
     </com.android.settingslib.widget.LayoutPreference>
@@ -31,19 +35,19 @@
         android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageAdvanced"
         settings:searchable="false" />
 
-    <!-- Battery light -->
-    <SwitchPreference
-        android:key="battery_light_enabled"
-        android:order="-3"
-        android:title="@string/battery_light_title"
-        settings:controller="com.android.settings.notification.BatteryLightPreferenceController"/>
-
     <Preference
         android:key="battery_saver_summary"
-        android:order="-2"
+        android:order="-3"
         android:title="@string/battery_saver"
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
         settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
+
+    <!-- Battery light -->
+    <SwitchPreference
+        android:key="battery_light_enabled"
+        android:order="-2"
+        android:title="@string/battery_light_title"
+        settings:controller="com.android.settings.notification.BatteryLightPreferenceController" />
 
     <Preference
         android:key="smart_battery_manager"
