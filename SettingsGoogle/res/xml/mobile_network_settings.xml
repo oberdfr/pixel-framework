@@ -73,6 +73,11 @@
             android:title="@string/mms_message_title"
             settings:controller="com.android.settings.network.telephony.MmsMessagePreferenceController" />
         <SwitchPreference
+            android:key="force_lteca_key"
+            android:title="@string/force_lte_ca"
+            android:summary="@string/force_lte_ca_summary"
+            settings:controller="com.android.settings.network.telephony.ForceLteCaPreferenceController" />
+        <SwitchPreference
             android:key="enhanced_4g_lte"
             android:persistent="false"
             android:summary="@string/enhanced_4g_lte_mode_summary"
@@ -93,6 +98,13 @@
             android:title="@string/enhanced_4g_lte_mode_title_advanced_calling"
             settings:controller="com.android.settings.network.telephony.Enhanced4gAdvancedCallingPreferenceController"
             settings:keywords="@string/keywords_enhance_4g_lte" />
+        <SwitchPreference
+            android:key="nr_advanced_calling"
+            android:persistent="false"
+            android:summary="@string/nr_advanced_calling_summary"
+            android:title="@string/nr_advanced_calling_title"
+            settings:controller="com.android.settings.network.telephony.NrAdvancedCallingPreferenceController"
+            settings:keywords="@string/keywords_nr_advanced_calling" />
         <SwitchPreference
             android:key="contact_discovery_opt_in"
             android:persistent="false"
@@ -203,13 +215,6 @@
             android:summary="@string/require_cellular_encryption_summary"
             android:title="@string/require_cellular_encryption_title"
             settings:controller="com.android.settings.network.telephony.NullAlgorithmsPreferenceController" />
-        <SwitchPreference
-            android:key="nr_advanced_calling"
-            android:persistent="false"
-            android:summary="@string/nr_advanced_calling_summary"
-            android:title="@string/nr_advanced_calling_title"
-            settings:controller="com.android.settings.network.telephony.NrAdvancedCallingPreferenceController"
-            settings:keywords="@string/keywords_nr_advanced_calling" />
     </PreferenceCategory>
     <Preference
         android:key="convert_to_esim"

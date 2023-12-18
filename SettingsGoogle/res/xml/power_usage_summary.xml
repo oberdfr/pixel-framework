@@ -118,5 +118,4 @@
         android:title="@string/battery_footer_summary"
         android:selectable="false"
         settings:searchable="false" />
-
 </PreferenceScreen>
