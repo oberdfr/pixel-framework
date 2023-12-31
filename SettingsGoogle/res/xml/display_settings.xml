@@ -130,7 +130,8 @@
             android:key="smart_pixels"
             android:title="@string/smart_pixels_title" 
             android:summary="@string/smart_pixels_summary"
-            android:fragment="com.evolution.settings.fragments.SmartPixels" />
+            android:fragment="com.evolution.settings.fragments.SmartPixels"
+            settings:requiresConfig="@*android:bool/config_supportSmartPixels" />
         <ListPreference
             android:key="min_refresh_rate"
             android:title="@string/min_refresh_rate_title"
@@ -187,7 +188,8 @@
             android:key="proximity_on_wake"
             android:title="@string/proximity_wake_title"
             android:summary="@string/proximity_wake_summary"
-            android:defaultValue="@*android:bool/config_proximityCheckOnWakeEnabledByDefault" />
+            android:defaultValue="@*android:bool/config_proximityCheckOnWakeEnabledByDefault"
+            settings:requiresConfig="@*android:bool/config_proximityCheckOnWake" />
         <com.evolution.settings.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wake_when_plugged_or_unplugged_title"
@@ -198,7 +200,8 @@
             android:key="pocket_judge"
             android:title="@string/pocket_judge_title"
             android:summary="@string/pocket_judge_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            settings:requiresConfig="@*android:bool/config_pocketModeSupported" />
         <Preference
             android:key="display_cutout_force_fullscreen_settings"
             android:title="@string/display_cutout_force_fullscreen_title"
