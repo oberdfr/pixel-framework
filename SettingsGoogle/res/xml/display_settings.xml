@@ -170,7 +170,8 @@
             android:enabled="@*lineageos.platform:bool/config_pocketModeSupported"
             android:key="pocket_judge"
             android:summary="@string/pocket_judge_summary"
-            android:title="@string/pocket_judge_title" />
+            android:title="@string/pocket_judge_title"
+            settings:requiresConfig="@*lineageos.platform:bool/config_pocketModeSupported" />
 
         <SwitchPreference
             android:key="show_operator_name"
@@ -199,7 +200,8 @@
             android:defaultValue="@*lineageos.platform:bool/config_proximityCheckOnWakeEnabledByDefault"
             android:key="proximity_on_wake"
             android:summary="@string/proximity_wake_summary"
-            android:title="@string/proximity_wake_title" />
+            android:title="@string/proximity_wake_title"
+            settings:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:defaultValue="false"
