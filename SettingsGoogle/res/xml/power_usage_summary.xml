@@ -33,6 +33,14 @@
         android:title="@string/battery_saver"
         settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
 
+    <!-- Charging control -->
+    <Preference
+        android:key="charging_control"
+        android:title="@string/charging_control_title"
+        android:summary="@string/charging_control_summary"
+        android:fragment="com.android.settings.health.ChargingControlSettings"
+        settings:controller="com.android.settings.health.ChargingControlPreferenceController" />
+
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:defaultValue="false"
         android:key="arcane_idle_manager"
