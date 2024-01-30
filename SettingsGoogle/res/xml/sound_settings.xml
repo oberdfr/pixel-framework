@@ -124,27 +124,6 @@
         android:fragment="com.android.settings.accessibility.VibrationSettings"
         settings:controller="com.android.settings.accessibility.VibrationPreferenceController"
         settings:keywords="@string/keywords_vibration" />
-    <com.evolution.settings.preference.SystemSettingSwitchPreference
-        android:key="qs_brightness_slider_haptic"
-        android:order="-89"
-        android:title="@string/qs_brightness_slider_haptic_title"
-        android:summary="@string/qs_brightness_slider_haptic_summary"
-        android:defaultValue="false"
-        settings:controller="com.android.settings.sound.CustomHapticPreferenceController" />
-    <com.evolution.settings.preference.SecureSettingSwitchPreference
-        android:key="quick_settings_vibrate"
-        android:order="-88"
-        android:title="@string/quick_settings_vibrate_title"
-        android:summary="@string/quick_settings_vibrate_summary"
-        android:defaultValue="false"
-        settings:controller="com.android.settings.sound.CustomHapticPreferenceController" />
-    <com.evolution.settings.preference.SystemSettingSwitchPreference
-        android:order="-87"
-        android:key="volume_slider_haptic"
-        android:title="@string/volume_panel_haptic_feedback_title"
-        android:summary="@string/volume_panel_haptic_feedback_summary"
-        android:defaultValue="false"
-        settings:controller="com.android.settings.sound.CustomHapticPreferenceController" />
     <ListPreference
         android:key="vibration_pattern"
         android:order="-85"
