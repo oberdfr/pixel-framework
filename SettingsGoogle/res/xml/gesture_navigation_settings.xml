@@ -4,14 +4,11 @@
     android:key="gesture_navigation_settings_page"
     android:title="@string/gesture_settings_activity_title"
     settings:keywords="@string/keywords_gesture_navigation_settings">
-    <com.evolution.settings.preference.SystemSettingListPreference
-        android:key="key_edge_long_swipe_action"
-        android:dialogTitle="@string/navigation_bar_edge_long_swipe_title"
-        android:title="@string/navigation_bar_edge_long_swipe_title"
-        android:summary="%s"
-        android:entries="@array/hardware_keys_action_entries"
-        android:entryValues="@array/hardware_keys_action_values"
-        android:defaultValue="0" />
+    <Preference
+        android:key="gesture_nav_custom_options"
+        android:title="@string/navbar_gesture_tweaks_pref_title"
+        android:summary="@string/navbar_gesture_tweaks_pref_summary"
+        android:fragment="com.android.settings.gestures.GestureTweaksSettings" />
     <com.evolution.settings.preference.SystemSettingSwitchPreference
         android:key="navigation_bar_hint"
         android:title="@string/show_navbar_hint_title"
