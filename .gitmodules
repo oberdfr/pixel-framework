@@ -1,0 +1,6 @@
+[submodule "ParanoidSense"]
+	path = ParanoidSense
+	url = https://github.com/hentaiOS-redfin/packages_apps_ParanoidSense
+[submodule "PixelParts"]
+	path = PixelParts
+	url = https://github.com/Evolution-X-Devices/packages_apps_PixelParts
