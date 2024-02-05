@@ -38,11 +38,13 @@
         android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
         settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
     <!-- Battery light -->
-    <SwitchPreference
-        android:key="battery_light_enabled"
+    <Preference
+        android:key="battery_lights"
         android:order="-2"
         android:title="@string/battery_light_title"
-        settings:controller="com.android.settings.notification.BatteryLightPreferenceController" />
+        android:summary="@string/battery_light_summary"
+        android:fragment="com.android.settings.evolution.notificationlight.BatteryLightSettings"
+        settings:controller="com.android.settings.evolution.notificationlight.BatteryLightPreferenceController" />
     <Preference
         android:key="smart_battery_manager"
         android:order="-1"
