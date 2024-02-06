@@ -58,41 +58,9 @@
         android:key="gesture_power_menu_summary"
         android:title="@string/power_menu_setting_name"
         settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
-    <Preference
-        android:key="doze_double_tap_summary"
-        android:title="@string/double_tap_title"
-        android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
-        settings:userRestriction="no_ambient_display"
-        settings:controller="com.android.settings.gestures.DoubleTapAmbientPreferenceController" />
-    <Preference
-        android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
-        android:key="three_finger_gesture_summary"
-        android:title="@string/swipe_to_screenshot_gesture_title"
-        settings:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
-    <Preference
-        android:fragment="com.android.settings.gestures.PowerButtonTorchSettings"
-        android:key="power_button_torch_summary"
-        android:title="@string/power_button_torch_title"
-        settings:controller="com.android.settings.gestures.PowerButtonTorchGesturePreferenceController" />
-    <Preference
-        android:key="volume_button_music_control_summary"
-        android:title="@string/volume_button_music_control_title"
-        android:fragment="com.android.settings.gestures.VolumeButtonMusicControlGestureSettings"
-        settings:controller="com.android.settings.gestures.VolumeButtonMusicControlPreferenceController" />
     <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         android:key="gesture_prevent_ringing_summary"
         android:title="@string/gesture_prevent_ringing_screen_title"
         settings:controller="com.android.settings.gestures.PreventRingingParentPreferenceController" />
-    <Preference
-        android:key="touchscreen_gesture_settings"
-        android:persistent="false"
-        android:title="@string/touchscreen_gesture_settings_title"
-        android:summary="@string/touchscreen_gesture_settings_summary">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.touch.gestures"
-            android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings"
-            />
-    </Preference>
 </PreferenceScreen>

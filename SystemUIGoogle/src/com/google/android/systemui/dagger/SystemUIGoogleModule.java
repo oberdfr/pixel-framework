@@ -46,7 +46,6 @@ import com.android.systemui.plugins.qs.QSFactory;
 import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.power.EnhancedEstimates;
 import com.android.systemui.qs.dagger.QSModule;
-import com.android.systemui.qs.dagger.evolution.EvolutionXModule;
 import com.android.systemui.qs.tileimpl.QSFactoryImpl;
 import com.android.systemui.recents.Recents;
 import com.android.systemui.recents.RecentsImplementation;
@@ -124,8 +123,7 @@ import dagger.Lazy;
         ColumbusModule.class,
         StatusBarEventsModule.class,
         SystemUIGooglePolicyModule.class,
-        RotationLockModule.class,
-        EvolutionXModule.class
+        RotationLockModule.class
 })
 public abstract class SystemUIGoogleModule {
 

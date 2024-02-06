@@ -11,17 +11,6 @@
             android:title="@string/lock_screen_notifications_title"
             settings:keywords="@string/keywords_lock_screen_notif" />
 
-        <com.evolution.settings.preference.SecureSettingListPreference
-            android:key="face_unlock_method"
-            android:title="@string/face_unlock_method_title"
-            android:summary="%s"
-            android:dialogTitle="@string/face_unlock_method_title"
-            android:entries="@array/face_unlock_method_entries"
-            android:entryValues="@array/face_unlock_method_values"
-            android:defaultValue="0"
-            settings:searchable="false"
-            settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenUnlockMethodPreferenceController" />
-
         <SwitchPreference
             android:key="security_display_lockscreen_bypass"
             android:summary="@string/lockscreen_bypass_summary"
@@ -71,18 +60,6 @@
         android:order="1000"
         android:title="@string/ambient_display_category_triggers"
         settings:controller="com.android.settings.display.AmbientDisplayWhenToShowPreferenceController">
-        <com.android.settingslib.RestrictedSwitchPreference
-            android:key="ambient_display_always_on"
-            android:summary="@string/doze_always_on_summary"
-            android:title="@string/doze_always_on_title"
-            settings:controller="com.android.settings.display.AmbientDisplayAlwaysOnPreferenceController"
-            settings:keywords="@string/keywords_always_show_time_info"
-            settings:userRestriction="no_ambient_display" />
-        <com.evolution.settings.preference.SecureSettingSwitchPreference
-            android:key="doze_on_charge"
-            android:title="@string/doze_on_charge_title"
-            android:summary="@string/doze_on_charge_summary"
-            android:defaultValue="false" />
         <Preference
             android:fragment="com.android.settings.gestures.TapScreenGestureSettings"
             android:key="ambient_display_tap"
@@ -101,12 +78,6 @@
             android:title="@string/ambient_display_pickup_title"
             settings:controller="com.android.settings.gestures.PickupGesturePreferenceController"
             settings:searchable="false" />
-        <com.evolution.settings.preference.SecureSettingSwitchPreference
-            android:key="screen_off_udfps_enabled"
-            android:title="@string/ambient_display_screen_off_udfps_title"
-            android:summary="@string/ambient_display_screen_off_udfps_summary"
-            android:defaultValue="false"
-            settings:controller="com.android.settings.security.UdfpsGesturePreferenceController" />
         <SwitchPreference
             android:key="ambient_display_notification"
             android:summary="@string/doze_summary"
