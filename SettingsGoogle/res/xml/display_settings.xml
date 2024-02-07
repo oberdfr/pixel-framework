@@ -61,9 +61,6 @@
             android:fragment="com.android.settings.dream.DreamSettings"
             settings:controller="com.android.settings.display.ScreenSaverPreferenceController"
             settings:keywords="@string/keywords_screensaver" />
-        <com.android.settings.display.DensityPreference
-            android:key="density"
-            android:title="@string/developer_smallest_width" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/category_name_color">
         <SwitchPreference
@@ -85,9 +82,6 @@
             settings:keywords="@string/keywords_color_mode" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/category_name_display_controls">
-        <SwitchPreference
-            android:key="enable_blurs_on_windows"
-            android:title="@string/window_blurs"/>
         <com.android.settingslib.PrimarySwitchPreference
             android:key="auto_rotate"
             android:title="@string/accelerometer_title"
