@@ -59,11 +59,6 @@
         android:fragment="com.android.settings.gestures.PowerButtonTorchSettings"
         settings:controller="com.android.settings.gestures.PowerButtonTorchGesturePreferenceController" />
     <Preference
-        android:fragment="com.android.settings.gestures.PowerMenuSettings"
-        android:key="gesture_power_menu_summary"
-        android:title="@string/power_menu_setting_name"
-        settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
-    <Preference
         android:key="three_finger_gesture_summary"
         android:title="@string/swipe_to_screenshot_gesture_title"
         android:fragment="com.android.settings.gestures.SwipeToScreenshotGestureSettings"
@@ -73,6 +68,11 @@
         android:title="@string/volume_button_music_control_title"
         android:fragment="com.android.settings.gestures.VolumeButtonMusicControlGestureSettings"
         settings:controller="com.android.settings.gestures.VolumeButtonMusicControlPreferenceController" />
+    <Preference
+        android:fragment="com.android.settings.gestures.PowerMenuSettings"
+        android:key="gesture_power_menu_summary"
+        android:title="@string/power_menu_setting_name"
+        settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
     <com.android.settingslib.PrimarySwitchPreference
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         android:key="gesture_prevent_ringing_summary"
